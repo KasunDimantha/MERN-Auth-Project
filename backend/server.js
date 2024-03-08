@@ -3,6 +3,7 @@ const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const workoutRoutes = require('./routes/Workouts')
+const userRoutes = require('./routes/user')
 
 
 // express app
@@ -19,6 +20,7 @@ app.use((req, res, next) => {
 
 // routes
 app.use('/api/workouts' , workoutRoutes)
+app.use('/api/user' , userRoutes)
 
 
 // connect to db
